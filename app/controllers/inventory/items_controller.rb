@@ -4,8 +4,8 @@ class Inventory::ItemsController < ApplicationController
   end
 
   def create
-    Item.create(course_params)
-    redirect_to root_path
+    @item = Item.create(course_params)
+    redirect_to root_path (@item)
   end
 
   def show
